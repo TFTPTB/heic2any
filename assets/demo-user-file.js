@@ -4,10 +4,10 @@ document.getElementById("user-file").addEventListener("change", function (ev) {
 	var blob = ev.target.files[0];
 	heic2any({
 		blob: blob,
-		toType: "image/jpg",
+		toType: "image/jpeg",
 	})
 		.then(function (resultBlob) {
-			saveFile(resultBlob, blob.name + ".jpg");
+			saveFile(resultBlob, blob.name + ".jpeg");
 		})
 		.catch(function (x) {
 			document.getElementById("error-on-try").style.display = "block";
